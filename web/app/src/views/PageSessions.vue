@@ -17,7 +17,9 @@
         </div>
       </div>
 
-      <div class="tabs-content">
+      <div class="scroll-wrapper">
+
+<div class="tabs-content">
         <transition name="fade" mode="out-in">
           <div
             class="tabs-panel-content"
@@ -117,6 +119,9 @@
           </div>
         </transition>
       </div>
+      </div>
+
+      
     </div>
   </div>
 </template>
@@ -236,6 +241,8 @@ export default {
 }
 .page-all-sessions {
   display: grid;
+overflow: hidden;
+
   // grid-template-rows: 60px calc(100vh - 50px - 66px);
 }
 .tabs-container,
@@ -306,14 +313,9 @@ export default {
   }
 }
 .tabs-content {
-  margin-top: 30px;
+  margin-top: 30px;    
   .tabs-panel-content {
-    // display: none
-    // color: white;
-    // height: 100%;
-    // overflow-y: scroll;
-    // box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  }
+       }
 }
 .tabs-container {
   .tab-items {
@@ -410,6 +412,19 @@ export default {
   .tabs-panel-content {
     padding: 0 10px;
   }
+
+  .time-bar{
+  grid-template-columns: 0.5fr;
+  }
+  .scroll-wrapper{
+    overflow-x: scroll;
+  }
+
+  .room-container {
+
+  grid-template-columns: 40px repeat(3, 180px);
+    grid-column-gap: 20px;
+  }
   .tabs-panel-content {
     .session-panes {
       a {
@@ -417,6 +432,7 @@ export default {
         grid-template-columns: 1fr;
         .date-time {
           justify-content: flex-start;
+          font-size: 10px;
         }
       }
     }
