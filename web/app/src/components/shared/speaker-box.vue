@@ -75,7 +75,7 @@ export default {
 
   .speaker-meta {
     letter-spacing: 2px;
-    text-shadow: 0 1px 2px #000;
+    text-shadow:2px 2px #fff;
     position: absolute;
     bottom: 5%;
     left: 20%;

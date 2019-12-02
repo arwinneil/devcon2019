@@ -265,7 +265,7 @@ a.back {
     color: white;
     background: rgba($color-main, 0.5);
     border-radius: 100%;
-    border: 3px solid #ff4932;
+    border: 3px solid #ee5454;
     padding-left: calc(var(--backsize) / 3.5);
     text-align: center;
     transition: transform 0.2s ease-in-out;

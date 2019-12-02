@@ -1,19 +1,19 @@
 <template>
   <div class="home-component intro-slider-wrapper">
-    <carousel class="slider-wrapper" :per-page="1" :loop="true" :autoplay="true" :autoplayTimeout="3000" :paginationActiveColor="'#ff4932'" :autoplayHoverPause="true" :mouse-drag="false" :navigationEnabled="true" :paginationColor="'#fff'" :paginationPadding="5" :paginationSize="20" :centerMode="true" :navigationNextLabel="'›'" :navigationPrevLabel="'‹'">
+    <carousel class="slider-wrapper" :per-page="1" :loop="true" :autoplay="true" :autoplayTimeout="3000" :paginationActiveColor="'#ee5454'" :autoplayHoverPause="true" :mouse-drag="false" :navigationEnabled="true" :paginationColor="'#fff'" :paginationPadding="5" :paginationSize="20" :centerMode="true" :navigationNextLabel="'›'" :navigationPrevLabel="'‹'">
       <slide class="slide">
         <div class="slide-item slide-quote">
           The
           <span class="mega-rainbow">most important</span> tech conference in Mauritius.
         </div>
         <div class="slide-item slide-button button">
-          <button-waw :theme="'#97d0e1'" :size="'50px'" :link="'https://www.meetup.com/MauritiusSoftwareCraftsmanshipCommunity/events/258586831/'">Registration closed</button-waw>
+          <button-waw :theme="'#ffc400'" :size="'50px'" :link="'https://www.meetup.com/MauritiusSoftwareCraftsmanshipCommunity/events/258586831/'">Registration closed</button-waw>
         </div>
       </slide>
       <slide class="slide">
         <div class="slide-item slide-quote"><span class="mega-rainbow">leaderboard</span> of the conference.</div>
         <div class="slide-item slide-button button">
-          <button-waw :theme="'#97d0e1'" :size="'50px'" :link="'/top'">Open Leaderboard</button-waw>
+          <button-waw :theme="'#ffc400'" :size="'50px'" :link="'/top'">Open Leaderboard</button-waw>
         </div>
       </slide>
       <slide class="slide">
@@ -23,13 +23,13 @@
           <span class="mega-rainbow">by</span> Developers
         </div>
         <div class="slide-item slide-button button">
-          <button-waw :theme="'#97d0e1'" :size="'70px'" :link="'/life-at-devcon'">View past events</button-waw>
+          <button-waw :theme="'#ffc400'" :size="'70px'" :link="'/life-at-devcon'">View past events</button-waw>
         </div>
       </slide>
       <slide class="slide">
         <div class="slide-item slide-quote"><span class="mega-rainbow">Networking</span> with Renown Speakers</div>
         <div class="slide-item slide-button button">
-          <button-waw :theme="'#97d0e1'" :size="'70px'" :link="'/speakers'">View all speakers</button-waw>
+          <button-waw :theme="'#ffc400'" :size="'70px'" :link="'/speakers'">View all speakers</button-waw>
         </div>
       </slide>
       <slide class="slide">
@@ -39,7 +39,7 @@
           of Charge
         </div>
         <div class="slide-item slide-button button">
-          <button-waw :theme="'#97d0e1'" :size="'70px'" :link="'https://www.meetup.com/MauritiusSoftwareCraftsmanshipCommunity/events/258586831/'">Registration closed</button-waw>
+          <button-waw :theme="'#ffc400'" :size="'70px'" :link="'https://www.meetup.com/MauritiusSoftwareCraftsmanshipCommunity/events/258586831/'">Registration closed</button-waw>
         </div>
       </slide>
     </carousel>
@@ -49,19 +49,25 @@
 
 <style lang="scss" scoped>
 .intro-slider-wrapper {
-  background: url("/img/hashtag.png") no-repeat top center;
+  //background: url("/img/hashtag.png") no-repeat top center;
+  @import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
   &:before {
-    content: "Developers conference 2019";
+    content: "Developers conference 2020";
     position: absolute;
     left: 0;
     width: 100%;
     text-align: center;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 5em;
     text-transform: uppercase;
-    letter-spacing: 16px;
-    color: #ff5f38;
-    margin-top: 90px;
-    opacity: 0.4;
+    color: red;
+    margin-top: 40px; 
+    letter-spacing: 5px;
+    //font-family: "Permanent Marker";
+
+    font-family: "Bangers",cursive;
+    text-shadow:   5px 5px white;
+
+
   }
 
   @media screen and (max-width: $mobile) {
@@ -90,6 +96,8 @@
       text-align: center;
       text-transform: uppercase;
       font-weight: 900;
+        text-shadow:-8px 9px #fff;
+
 
       span {
         font-size: 150%;
@@ -149,7 +157,7 @@
     transform: translateX(-50%);
   }
   .VueCarousel-navigation-button {
-    color: white;
+    color: black;
   }
 
   .VueCarousel-navigation-prev,

@@ -137,7 +137,7 @@ a.back {
     color: white;
     background: rgba($color-main, 0.5);
     border-radius: 100%;
-    border: 3px solid #ff4932;
+    border: 3px solid #ee5454;
     padding-left: calc(var(--backsize) / 3.5);
     text-align: center;
     transition: transform 0.2s ease-in-out;
@@ -174,7 +174,7 @@ a.back {
   // background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 20px rgba(0, 0, 0, 1);
   border-radius: 15px;
-  background: no-repeat left top/100% auto url(../../src/assets/bg/bg-red-small.svg), rgba(0, 0, 0, 0.4);
+  // background: no-repeat left top/100% auto url(../../src/assets/bg/bg-red-small.svg), rgba(0, 0, 0, 0.4);
 
   h1 {
     font-size: 50px;
@@ -298,8 +298,7 @@ a.back {
     padding: 10px;
     // height: 50px;
     font-weight: 900;
-    text-shadow: 0 0 10px #fff;
-
+    text-shadow: -2px 2px #fff;
     &:last-child {
       margin-right: 0;
     }

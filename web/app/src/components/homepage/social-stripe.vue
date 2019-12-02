@@ -95,7 +95,7 @@ p {
   fill: currentColor;
   width: 2.5rem;
   margin: 16px;
-  color: white;
+  color: black;
 }
 
 .icon-wrapper {

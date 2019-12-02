@@ -87,8 +87,13 @@ body {
 html {
   overflow-y: scroll;
 
-  background: $color-main url("/img/bg/texture.png");
-  background-size: 100% auto;
+ background-image: url(/img/bg/zoom.png), radial-gradient(ellipse farthest-corner, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, #ffffff 30%, #ffffff 40%, rgba(0, 0, 0, 0) 90%), radial-gradient(ellipse farthest-corner at 0px 0px, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, #ffffff 15%, #ffffff 20%, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 8px 8px, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, #ffffff 15%, #ffffff 20%, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 0px 8px, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, #ffffff 15%, #ffffff 20%, rgba(0, 0, 0, 0) 40%), radial-gradient(ellipse farthest-corner at 8px 0px, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, #ffffff 15%, #ffffff 20%, rgba(0, 0, 0, 0) 50%), linear-gradient(40deg, #f07c7c 0, #e6945d 30%, #ffc400 50%, #f8be9d 70%, #3478df 100%); 
+ background-size: 100%, 8px 8px, 8px 8px, 8px 8px, 8px 8px, 8px 8px, 200% 200%;
+ 
+
+ background-repeat: no-repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat,repeat;
+
+
 }
 
 body {
@@ -100,7 +105,7 @@ body {
     z-index: -1;
 
     display: block;
-    background: no-repeat right top/45% auto url("../src/assets/bg/bg-blue-light.svg"), no-repeat left top/45% auto url("../src/assets/bg/bg-red.svg"), no-repeat center center/contain url("/img/bg/team2018.jpg");
+    // background: no-repeat right top/45% auto url("../src/assets/bg/bg-blue-light.svg"), no-repeat left top/45% auto url("../src/assets/bg/bg-red.svg"), no-repeat center center/contain url("/img/bg/team2018.jpg");
     width: 100%;
     height: 100%;
   }
@@ -128,7 +133,7 @@ body {
       z-index: -1;
 
       display: block;
-      background: no-repeat right top/auto 40% url("../src/assets/bg/bg-blue-light.svg"), no-repeat left top/20% auto url("../src/assets/bg/bg-red.svg"), no-repeat center center/contain url("/img/bg/team2018.jpg");
+      // background: no-repeat right top/auto 40% url("../src/assets/bg/bg-blue-light.svg"), no-repeat left top/20% auto url("../src/assets/bg/bg-red.svg"), no-repeat center center/contain url("/img/bg/team2018.jpg");
       width: 100%;
       height: 100%;
     }

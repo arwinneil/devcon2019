@@ -13,7 +13,7 @@ Vue.component("button-waw", ButtonWaw);
 Vue.config.productionTip = false;
 
 Vue.use(VueProgressBar, {
-  color: "#97D0E1",
+  color: "#ffc400",
   failedColor: "red",
   position: "relative",
   height: "2px",

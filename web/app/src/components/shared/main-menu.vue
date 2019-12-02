@@ -97,7 +97,8 @@ export default {
     li {
       list-style: none;
       a {
-        font-weight: 900;
+        font-weight: 600;
+        text-shadow: -5px 5px #fff;
         text-transform: uppercase;
         line-height: 80px;
         display: block;
@@ -125,6 +126,7 @@ export default {
         &.router-link-exact-active {
           color: $color-red-light;
           transition: color 0.2s ease-in-out;
+                  text-shadow: -2px 2px black;
 
           &:before {
             opacity: 1;
@@ -152,7 +154,7 @@ export default {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
       height: 100%;
       min-height: calc(100vh);
-      background: white;
+      background: black;
 
       li {
         border-bottom: 1px solid #ccc;

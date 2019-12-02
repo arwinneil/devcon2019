@@ -22,6 +22,6 @@
 
 <style lang="scss" scoped>
 .section-landing {
-  background-image: url("/img/landing-bg.jpg");
+ // background-image: url("/img/landing-bg.jpg");
 }
 </style>

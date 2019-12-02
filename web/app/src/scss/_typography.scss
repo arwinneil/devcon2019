@@ -7,10 +7,10 @@ html {
 // Links
 
 a {
-  color: white; // please i can't look at that ugly blue
+  color: black; // please i can't look at that ugly blue
   text-decoration: none;
   &:visited {
-    color: white;
+    color: black;
   }
 
   &:hover {
@@ -36,12 +36,12 @@ h2 {
 
 .mega-rainbow {
   font-family: $font-headings;
-  color: rgb(255, 95, 56);
+  color: #4c69f6;
   text-align: center;
   font-weight: 600;
 
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
 }
 
 h1,
@@ -70,7 +70,7 @@ h2 {
   font-size: 40px;
   line-height: 55px;
   font-family: var(--font-glacial);
-  color: white;
+  color: black;
   font-weight: 900;
   text-align: center;
 }
@@ -80,7 +80,7 @@ h3 {
   text-transform: uppercase;
   // text-align: center;
   font-weight: 900;
-  color: white;
+  color: black;
   margin: 0;
 }
 
@@ -90,7 +90,7 @@ h4.subtitle {
   text-transform: uppercase;
   text-align: center;
   font-weight: 900;
-  color: white;
+  color: black;
   margin: 0;
 }
 
@@ -134,7 +134,7 @@ small {
     font-size: 20px;
     font-family: var(--font-glacial);
     font-weight: 300;
-    color: white;
+    color: black;
   }
 }
 
@@ -155,7 +155,7 @@ small {
     font-size: 18px;
     font-family: var(--font-glacial);
     font-weight: 300;
-    color: white;
+    color: black;
   }
 }
 .section-description-wrapper,
@@ -164,7 +164,7 @@ small {
 
   p {
     font-family: var(--font-glacial);
-    color: var(--color-white);
+    color: var(--color-black);
     font-weight: 300;
     font-size: 19px;
     line-height: 28px;

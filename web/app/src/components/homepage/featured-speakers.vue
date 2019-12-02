@@ -6,7 +6,7 @@
         <SpeakerBox v-for="speaker in getFeaturedSpeakers" :key="speaker.id" :speaker="speaker" />
       </div>
       <div class="button-center">
-        <button-waw :theme="'#97d0e1'" :size="'70px'" :link="'/speakers'">
+        <button-waw :theme="'#ffc400'" :size="'70px'" :link="'/speakers'">
           View all speakers
         </button-waw>
       </div>

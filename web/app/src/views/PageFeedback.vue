@@ -265,7 +265,7 @@ export default {
 
   .virer-mam {
     // transform: rotate(-5deg);
-    background: no-repeat right top/200% auto url(../../src/assets/bg/bg-red-small.svg), rgba(0, 0, 0, 0.9);
+    // background: no-repeat right top/200% auto url(../../src/assets/bg/bg-red-small.svg), rgba(0, 0, 0, 0.9);
     width: 120vw;
     height: 100%;
   }

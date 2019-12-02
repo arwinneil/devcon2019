@@ -196,7 +196,7 @@ header h1 {
   left: 18px;
   height: 100%;
   width: 4px;
-  background: #ff5f38;
+  background: #ee5454;
 }
 
 @media only screen and (min-width: 1170px) {
@@ -242,7 +242,7 @@ header h1 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px #ff5f38, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+  box-shadow: 0 0 0 4px #ee5454, inset 0 2px 0 rgba(0, 0, 0, 0.08),
     0 3px 0 4px rgba(0, 0, 0, 0.05);
   overflow: hidden;
 }
@@ -343,7 +343,7 @@ header h1 {
   /*background: #fff;*/
   border-radius: 0.25em;
   padding: 1px 0;
-  box-shadow: 0 3px 0 #ff5f38;
+  box-shadow: 0 3px 0 #ee5454;
   background: #f4f4f4;
 }
 .cd-timeline-content::after {

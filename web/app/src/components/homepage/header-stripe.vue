@@ -60,6 +60,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
 .back-button-wrapper {
   display: none;
   cursor: pointer;
@@ -71,10 +73,10 @@ export default {
     height: var(--backsize);
     width: var(--backsize);
     padding: calc(var(--backsize) / 4);
-    color: white;
+    color: black;
     background: rgba($color-main, 0.5);
     border-radius: 100%;
-    border: 3px solid #ff4932;
+    border: 3px solid #ee5454;
     padding-left: calc(var(--backsize) / 3.5);
     text-align: center;
     transition: transform 0.2s ease-in-out;
@@ -137,16 +139,17 @@ export default {
     text-align: center;
     width: 40px;
     height: 3px;
-    color: var(--color-white);
-    background: var(--color-white);
+    color: var(--color-black);
+    background: var(--color-black);
     transition: all 0.2s ease-out;
+    text-shadow: -2px 2px #fff;
 
     &:after,
     &:before {
       content: "";
       width: 40px;
       height: 3px;
-      background: var(--color-white);
+      background: var(--color-black);
       position: absolute;
       left: 0;
       transition: all 0.3s ease-in-out;

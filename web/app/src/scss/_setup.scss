@@ -4,18 +4,18 @@
 
 $color-main: #181844;
 $color-red: #6d182e;
-$color-red-light: #ff4932;
-$color-blue: #3f4cd7;
-$color-blue-light: #97d0e1;
+$color-red-light: #ffb732;
+$color-blue: #ffffff;
+$color-blue-light: #ffc400;
 
 :root {
   --color-main: #181844;
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-blue: #2731a5;
+  --color-blue: #ffffff;
   --color-blue-light: $color-blue-light;
   --color-red: $color-red;
-  --color-red-light: #ff4932;
+  --color-red-light: #ffc400;
 
   --color-green: #0dcd53;
   --font-glacial: "Century Gothic", sans-serif;
@@ -35,13 +35,13 @@ $z-index: (
   middle: 800,
   lower: 100
 );
-
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 /*-----------------------------------------------*/
 /*				Fonts						                       */
 /*-----------------------------------------------*/
 
-$font-primary: "Century Gothic", Helvetica, Arial, sans-serif;
-$font-headings: "Bungee Outline", cursive;
+$font-primary:  'Permanent Marker', cursive;
+$font-headings:  'Permanent Marker', cursive;
 
 /*-----------------------------------------------*/
 /*					Dimensions           		 */

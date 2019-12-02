@@ -109,13 +109,13 @@ export default {
         list-style-type: none;
 
         a {
-          color: white;
+          color: black;
           text-decoration: none;
           padding-left: $gutter;
           cursor: pointer;
 
           &:visited {
-            color: white;
+            color: black;
           }
           &:hover {
             text-decoration: underline;

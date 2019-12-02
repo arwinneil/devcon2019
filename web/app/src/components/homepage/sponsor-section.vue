@@ -117,7 +117,7 @@
     </div>
 
     <div class="button-center">
-      <button-waw :theme="'#97d0e1'" :size="'70px'" :link="'https://github.com/mscraftsman/devcon2019/raw/master/assets/DevCon2019-SponsorshipProposal.pdf'">
+      <button-waw :theme="'#ffc400'" :size="'70px'" :link="'https://github.com/mscraftsman/devcon2019/raw/master/assets/DevCon2019-SponsorshipProposal.pdf'">
         Become a Sponsor
       </button-waw>
     </div>

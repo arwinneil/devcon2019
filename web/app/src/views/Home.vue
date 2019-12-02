@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <IntroSlider/>
-    <FiveYears/>
     <DevconStats/>
     <FeaturedSpeakers/>
     <!-- <BecomeSpeaker/> -->
