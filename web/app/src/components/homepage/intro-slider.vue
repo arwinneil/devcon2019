@@ -7,9 +7,13 @@
           <span class="mega-rainbow">most important</span> tech conference in Mauritius.
         </div>
         <div class="slide-item slide-button button">
-          <button-waw :theme="'#97d0e1'" :size="'70px'" :link="'https://www.meetup.com/MauritiusSoftwareCraftsmanshipCommunity/events/258586831/'">
-            Register now
-          </button-waw>
+          <button-waw :theme="'#97d0e1'" :size="'50px'" :link="'https://www.meetup.com/MauritiusSoftwareCraftsmanshipCommunity/events/258586831/'">Registration closed</button-waw>
+        </div>
+      </slide>
+      <slide class="slide">
+        <div class="slide-item slide-quote"><span class="mega-rainbow">leaderboard</span> of the conference.</div>
+        <div class="slide-item slide-button button">
+          <button-waw :theme="'#97d0e1'" :size="'50px'" :link="'/top'">Open Leaderboard</button-waw>
         </div>
       </slide>
       <slide class="slide">
@@ -25,9 +29,7 @@
       <slide class="slide">
         <div class="slide-item slide-quote"><span class="mega-rainbow">Networking</span> with Renown Speakers</div>
         <div class="slide-item slide-button button">
-          <button-waw :theme="'#97d0e1'" :size="'70px'" :link="'/speakers'">
-            View all speakers
-          </button-waw>
+          <button-waw :theme="'#97d0e1'" :size="'70px'" :link="'/speakers'">View all speakers</button-waw>
         </div>
       </slide>
       <slide class="slide">
@@ -37,9 +39,7 @@
           of Charge
         </div>
         <div class="slide-item slide-button button">
-          <button-waw :theme="'#97d0e1'" :size="'70px'" :link="'https://www.meetup.com/MauritiusSoftwareCraftsmanshipCommunity/events/258586831/'">
-            Register now
-          </button-waw>
+          <button-waw :theme="'#97d0e1'" :size="'70px'" :link="'https://www.meetup.com/MauritiusSoftwareCraftsmanshipCommunity/events/258586831/'">Registration closed</button-waw>
         </div>
       </slide>
     </carousel>
@@ -175,7 +175,7 @@ import { Carousel, Slide } from "vue-carousel";
 export default {
   components: {
     Carousel,
-    Slide
-  }
+    Slide,
+  },
 };
 </script>

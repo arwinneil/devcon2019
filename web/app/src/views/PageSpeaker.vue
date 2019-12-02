@@ -1,24 +1,30 @@
 <template>
   <div class="page page-session">
     <div class="back-button-wrapper">
-      <a @click="$router.go(-1)" class="back"> <img src="../assets/back.svg" alt /> Back </a>
+      <a @click="$router.go(-1)" class="back">
+        <img src="../assets/back.svg" alt> Back
+      </a>
     </div>
-    <div class="page-content">{{ speaker }}</div>
     <div class="page-content" v-if="speaker">
       <!-- <span>{{id}}</span> -->
-      <div class="session-title">{{ speaker.fullName }}</div>
+      <!-- <div class="session-title">{{ speaker.fullName }}</div> -->
+      <h1 class="span mega-rainbow">{{ speaker.fullName }}</h1>
 
       <div class="speakers-wrapper" v-if="speakers">
         <div class="speaker-wrapper">
           <div class="avatar">
-            <img :src="speaker.profilePicture" alt />
+            <img :src="speaker.profilePicture" alt>
           </div>
         </div>
       </div>
 
+      <h2 v-if="speaker.tagLine">
+        <p>{{ speaker.tagLine }}</p>
+      </h2>
+
       <div class="descriptions-row">
-        <div class="des-wrap" v-if="speaker.tagLine">
-          <p>{{ speaker.tagLine }}</p>
+        <div class="des-wrap">
+          <p>Bio</p>
         </div>
       </div>
 
@@ -28,17 +34,17 @@
 
       <div class="descriptions-row">
         <div class="des-wrap">
-          <p>Speaking about :</p>
+          <p>Speaking about</p>
         </div>
       </div>
       <!-- <div class="session-title">
         <a href="#">To be revealed soon... !</a>
-      </div> -->
+      </div>-->
 
-      <div class="session-title" v-for="session in speaker.sessions" :key="session.name">
-        <router-link :to="{ name: 'session', params: { id: session.id } }">
-          {{ session.name }}
-        </router-link>
+      <div class="sessions-listing">
+        <div class="session-title" v-for="session in speaker.sessions" :key="session.name">
+          <router-link :to="{ name: 'session', params: { id: session.id } }" v-html="session.name"></router-link>
+        </div>
       </div>
     </div>
     <div class="page-content" v-else>finding speaker details..</div>
@@ -52,32 +58,32 @@ import { FETCH_SESSIONS, FETCH_SPEAKERS } from "@/store";
 
 export default {
   methods: {
-    ...mapActions([FETCH_SESSIONS, FETCH_SPEAKERS])
+    ...mapActions([FETCH_SESSIONS, FETCH_SPEAKERS]),
   },
   computed: {
     ...mapGetters({
       sessions: "getSessions",
-      speakers: "getSpeakers"
+      speakers: "getSpeakers",
     }),
-    id: function () {
+    id: function() {
       return this.$route.params.id;
     },
-    speaker: function () {
+    speaker: function() {
       if (this.speakers.length === 0) {
         this.FETCH_SPEAKERS();
       }
       let theSpeaker = this.speakers.find(speaker => speaker.id === this.id);
       return theSpeaker;
     },
-    session: function () {
+    session: function() {
       let sessions = this.sessions
         .map(groups => groups.sessions)
-        .reduce(function (acc, curr) {
+        .reduce(function(acc, curr) {
           return [...acc, ...curr];
         }, []);
       let session = sessions.find(sess => (sess.id = this.id));
       return session;
-    }
+    },
   },
   beforeMount() {
     if (this.$store.state.sessions.length === 0) {
@@ -87,7 +93,7 @@ export default {
     } else {
       // console.info("sessions found !");
     }
-  }
+  },
 };
 </script>
 
@@ -99,7 +105,7 @@ export default {
     "session session"
     "footer footer";
   grid-template-columns: 100px 1fr;
-  grid-template-rows: 70px auto;
+  grid-template-rows: 90px auto;
   grid-auto-rows: auto;
   max-width: 900px;
   margin: 0 auto;
@@ -113,14 +119,13 @@ a.back {
 }
 
 .back-button-wrapper {
-  --backsize: 70px;
+  cursor: pointer;
+  --backsize: 60px;
   // grid-area: back;
   text-align: left;
   // margin-top: 5px;
-  transform: translateX(calc(var(--backsize) / 2 * -1)) translateY(var(--backsize));
+  transform: translateX(calc(var(--backsize) * -2)) translateY(calc(var(--backsize)));
   position: absolute;
-  cursor: pointer;
-
   a {
     display: flex;
     align-items: center;
@@ -128,20 +133,20 @@ a.back {
     width: var(--backsize);
     padding: calc(var(--backsize) / 4);
     // background: var(--color-blue);
-    color: var(--color-blue);
-    background: white;
-    border-radius: var(--backsize) 0 0 var(--backsize);
+    // color: var(--color-red);
+    color: white;
+    background: rgba($color-main, 0.5);
+    border-radius: 100%;
+    border: 3px solid #ff4932;
     padding-left: calc(var(--backsize) / 3.5);
     text-align: center;
     transition: transform 0.2s ease-in-out;
     // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-
     img {
       height: 100%;
-      margin-right: 15px;
+      // margin-right: 15px;
     }
   }
-
   &:hover {
     a {
       transform: translateX(-5px);
@@ -166,8 +171,28 @@ a.back {
 
 .page-content {
   grid-area: session;
-  background: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  // background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+  border-radius: 15px;
+  background: no-repeat left top/100% auto url(../../src/assets/bg/bg-red-small.svg), rgba(0, 0, 0, 0.4);
+
+  h1 {
+    font-size: 50px;
+    line-height: 60px;
+    padding-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+    padding: 0 0 20px 0;
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.sessions-listing {
+  padding: 20px 0 40px;
 }
 
 .session-title {
@@ -177,12 +202,23 @@ a.back {
   font-size: 40px;
   font-weight: 700;
   margin: 0 auto;
-  padding: 30px 5vw;
-  text-align: center;
+  padding: 15px 5vw;
+  // text-align: center;
   a {
     text-decoration: none;
-    color: var(--color-blue);
+    color: var(--color-red-light);
     font-size: 20px;
+    display: flex;
+    align-self: center;
+    // justify-content: left;
+
+    &:after {
+      content: " →";
+    }
+
+    &:hover {
+      color: white;
+    }
   }
 }
 
@@ -217,6 +253,7 @@ a.back {
       border-radius: var(--width);
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       overflow: hidden;
+      background: white;
 
       img {
         width: var(--width);
@@ -239,17 +276,19 @@ a.back {
 }
 
 .descriptions-row {
-  background: var(--color-blue);
+  background: no-repeat center center/contain url(../../src/assets/bg/scribble.svg);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18px;
+  height: 60px;
+  // background: white;
 
   .des-wrap {
     // width: 33.3%;
     margin-right: 10px;
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: var(--font-glacial);
     text-transform: uppercase;
     display: flex;
@@ -258,6 +297,8 @@ a.back {
     text-align: center;
     padding: 10px;
     // height: 50px;
+    font-weight: 900;
+    text-shadow: 0 0 10px #fff;
 
     &:last-child {
       margin-right: 0;
@@ -294,7 +335,8 @@ a.back {
 }
 
 .description-text {
-  padding: 20px;
+  padding: 10px 30px;
+  color: white;
 
   .back {
   }
@@ -330,12 +372,33 @@ a.back {
 }
 
 @media (max-width: 1000px) {
+  .page-session {
+    grid-template-rows: 5px auto;
+  }
+
+  .page-content {
+    border-radius: 0;
+  }
+
   .back-button-wrapper {
+    display: none;
+    .back {
+      border: none;
+    }
+
+    a {
+      border: none;
+    }
     // padding: 0 10px;
   }
 
-  .session-title {
-    font-size: 30px;
+  .page-content {
+    background: rgba(0, 0, 0, 0.4);
+    h1 {
+      font-size: 30px;
+      padding: 20px;
+      line-height: 35px;
+    }
   }
 }
 

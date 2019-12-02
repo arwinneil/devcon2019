@@ -80,6 +80,22 @@ export default new Router({
       name: "feedback",
       component: () => import("./views/PageFeedback.vue"),
     },
+    {
+      path: "/top",
+      props: true,
+      name: "top",
+      component: () => import("./views/PageTop.vue"),
+    },
+    {
+      path: "/bookmarks",
+      props: true,
+      name: "bookmarks",
+      component: () => import("./views/PageBookmarks.vue"),
+    },
+    {
+      path: "/index.html",
+      redirect: "/",
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (to.name != "sessions") {

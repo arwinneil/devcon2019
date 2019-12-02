@@ -39,7 +39,7 @@
 
 @media screen and (max-width: $mobile) {
   .container {
-    width: 80%;
+    width: 90%;
     max-width: 100%;
     margin: 0 auto;
   }
@@ -52,6 +52,11 @@
   a {
     text-decoration: none;
   }
+}
+
+.svgicon {
+  padding-right: 10px;
+  display:inline-block;
 }
 
 .button-center {
@@ -70,4 +75,63 @@
   width: 300px;
   margin: 0 auto;
   padding: 20px;
+}
+
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+
+
+.loading__container {
+  text-align: center;
+
+  h1 {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+}
+
+.loader-spinner,
+.loader-spinner:after {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+.loader-spinner {
+  margin: 20px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 7px solid rgba(255, 255, 255, 0.2);
+  border-right: 7px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 7px solid rgba(255, 255, 255, 0.2);
+  border-left: 7px solid #ffffff;
+  transform: translateZ(0);
+  animation: loader 0.6s infinite linear;
+  margin-bottom: 0;
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
